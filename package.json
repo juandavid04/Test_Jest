@@ -21,7 +21,11 @@
   "homepage": "https://github.com/juandavid04/Test_Jest#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "mysql2": "^3.1.2",
     "nodemon": "^2.0.20",
+    "pg": "^8.9.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.28.1",
     "uuid": "^9.0.0"
   },
   "devDependencies": {

@@ -1,5 +1,6 @@
 import express from "express";
 import {v4} from "uuid";
+import MunColombiaController from "./controllers/munColombia.controller.js";
 
 const app = express();
 
@@ -11,6 +12,11 @@ app.get('/ping',(req,res) => {
 
 app.get('/tasks', (req,res)=>{
     res.send([1,2])
+})
+
+app.get('/munColombia',async (req,res)=>{
+    const consulta = await MunColombiaController.find();
+    res.json(consulta)
 })
 
 app.post('/tasks',(req,res)=>{
