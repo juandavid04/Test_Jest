@@ -1,12 +1,12 @@
 import { Sequelize } from "sequelize";
 
 const Conexion = new Sequelize({
-    host: 'localhost',
+    host: process.env.HOST_DB,
     dialect: 'postgres',
-    username: 'postgres',
-    password: 'root',
-    database: 'prueba_postgis',
-    port: 5432,
+    username: process.env.USER_DB,
+    password: process.env.PASS_DB,
+    database: process.env.NAME_DB,
+    port: process.env.PORT_DB,
     schema: 'public',
     define:{
         schema:'public'
